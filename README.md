@@ -22,7 +22,6 @@ Create SSH Tunnel to my GCP VPS for my DS216J
   ```
 
 2. Put `tunnel_gcp` into `/usr/local/etc/rc.d`.
-
    ```sh
    # Please execute in project directory!!!
    # copy
@@ -32,7 +31,6 @@ Create SSH Tunnel to my GCP VPS for my DS216J
    ```
 
 3. Reboot or execute:
-
    ```sh
    sudo /usr/local/etc/rc.d/tunnel_gcp.sh start
    ```
