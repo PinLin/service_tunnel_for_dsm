@@ -1,10 +1,13 @@
 #!/bin/sh
 
+path='/var/services/homes/pinlin/tunnel_gcp'
+
 case $1 in
     start)
-	touch /var/services/homes/pinlin/tunnel_gcp/running
-	/var/services/homes/pinlin/tunnel_gcp/ssh.sh &
-    /var/services/homes/pinlin/tunnel_gcp/gitea.sh &
+	touch $path/running
+	for file in $(find $path/*.sh); do
+		$file &
+	done
 	;;
 	restart)
 	$0 stop
@@ -12,11 +15,11 @@ case $1 in
 	$0 start
 	;;
     stop)
-	if [ -f /var/services/homes/pinlin/tunnel_gcp/running ]; then
+	if [ -f $path/running ]; then
 		while read line; do
 			kill $line
-		done < /var/services/homes/pinlin/tunnel_gcp/running
-		rm /var/services/homes/pinlin/tunnel_gcp/running
+		done < $path/running
+		rm $path/running
 	fi
     ;;
 esac
