@@ -8,13 +8,13 @@ Another project is [Tunnel_DS216J](https://gitea.ntut.com.tw/PinLin/tunnel_ds216
 
 + `SSH`: 
 
-  + From 192.168.168.106:22
-  + To ntut.com.tw:9488(9487)
+  + From **192.168.168.106:22**
+  + To **ntut.com.tw:9488**
 
 + `Gitea`:
 
-  + From 192.168.168.106:3000
-  + To ntut.com.tw:10081(10080)
+  + From **192.168.168.106:3000**
+  + To **ntut.com.tw:10081**
 
 ## Install
 
