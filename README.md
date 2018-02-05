@@ -20,7 +20,7 @@ Another project is [Tunnel_DS216J](https://gitea.ntut.com.tw/PinLin/tunnel_ds216
 
 1. Clone this project.
   ```sh
-  git clone ssh://gitea@gitea.ntut.com.tw:9487/PinLin/tunnel_gcp.git
+  git clone https://gitea.ntut.com.tw/PinLin/tunnel_gcp.git
   ```
 
 2. Put `tunnel_gcp` into `/usr/local/etc/rc.d`.
