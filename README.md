@@ -1,6 +1,6 @@
 # Tunnel_GCP
 
-Create SSH Tunnel to my GCP VPS for my DS216J
+Create SSH Tunnel to my GCP VPS for my DS216J.
 
 Another project is [Tunnel_DS216J](https://gitea.ntut.com.tw/PinLin/tunnel_ds216j)
 
