@@ -9,17 +9,6 @@ case $1 in
 		$file &
 	done
 	;;
-	restart)
-	$0 stop
-	sleep 1s
-	$0 start
-	;;
     stop)
-	if [ -f $path/running ]; then
-		while read line; do
-			kill $line
-		done < $path/running
-		rm $path/running
-	fi
     ;;
 esac
