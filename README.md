@@ -18,18 +18,9 @@ Another project is [Tunnel_DS216J](https://gitea.ntut.com.tw/PinLin/tunnel_ds216
 
 ## Install
 
-1. Clone this project.
-  ```sh
-  git clone https://gitea.ntut.com.tw/PinLin/tunnel_gcp.git
-  ```
-
-2. Put `tunnel_gcp` into `/usr/local/etc/rc.d`.
-   ```sh
-   cd tunnel_gcp
-   sudo ln -s $(pwd)/tunnel_gcp.sh /usr/local/etc/rc.d/tunnel_gcp.sh
-   ```
-
-3. Start!
-   ```sh
-   sudo /usr/local/etc/rc.d/tunnel_gcp.sh start
-   ```
+```sh
+git clone https://gitea.ntut.com.tw/PinLin/tunnel_gcp.git ~/tunnel_gcp &&\
+cd ~/tunnel_gcp &&\
+sudo ln -s $(pwd)/tunnel_gcp.sh /usr/local/etc/rc.d/tunnel_gcp.sh &&\
+sudo /usr/local/etc/rc.d/tunnel_gcp.sh start
+```
