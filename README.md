@@ -23,9 +23,11 @@ Another project is [Tunnel_DS216J](https://gitea.ntut.com.tw/PinLin/tunnel_ds216
   git clone https://gitea.ntut.com.tw/PinLin/tunnel_gcp.git ~/tunnel_gcp && cd ~/tunnel_gcp
   ```
 
-2. Edit the content of `tunnel_gcp.sh`.
+2. Edit the content of `tunnel_gcp.sh`, `tunnel_ssh.conf` and `tunnel_gitea.conf`.
    ```sh
    sed -i "s/{{user}}/$USER/g" tunnel_gcp.sh
+   sed -i "s/{{user}}/$USER/g" tunnel_ssh.sh
+   sed -i "s/{{user}}/$USER/g" tunnel_gitea.sh
    ```
 
 3. Copy `tunnel_gcp.sh` to `/usr/local/etc/rc.d`, `tunnel_ssh.conf` and `tunnel_gitea.conf` to `/etc/init`, then reload.
