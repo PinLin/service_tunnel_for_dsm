@@ -12,7 +12,7 @@ Create SSH Tunnel to my GCP VPS for services on DS216J.
 + `Gitea`:
 
   + From **192.168.168.106:3000**
-  + To **ntut.com.tw:10081**
+  + To **ntut.com.tw:10080**
 
 ## Install
 
