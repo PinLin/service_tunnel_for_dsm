@@ -1,6 +1,6 @@
 #!/bin/sh
 
-path='/var/services/homes/{{user}}/tunnel_gcp'
+path='/var/services/homes/{{user}}/service_tunnel'
 
 case $1 in
     start)

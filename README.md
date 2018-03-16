@@ -22,16 +22,16 @@ Create SSH Tunnel to my GCP VPS for services on DS216J.
   cd ~/service_tunnel
   ```
 
-2. Edit the content of `tunnel_gcp.sh`, `tunnel_ssh.conf` and `tunnel_gitea.conf`.
+2. Edit the content of `service_tunnel.sh`, `tunnel_ssh.conf` and `tunnel_gitea.conf`.
    ```sh
-   sed -i "s/{{user}}/$USER/g" tunnel_gcp.sh
+   sed -i "s/{{user}}/$USER/g" service_tunnel.sh
    sed -i "s/{{user}}/$USER/g" tunnel_ssh.conf
    sed -i "s/{{user}}/$USER/g" tunnel_gitea.conf
    ```
 
-3. Copy `tunnel_gcp.sh` to `/usr/local/etc/rc.d`, `tunnel_ssh.conf` and `tunnel_gitea.conf` to `/etc/init`, then reload.
+3. Copy `service_tunnel.sh` to `/usr/local/etc/rc.d`, `tunnel_ssh.conf` and `tunnel_gitea.conf` to `/etc/init`, then reload.
    ```sh
-   sudo cp tunnel_gcp.sh /usr/local/etc/rc.d/
+   sudo cp service_tunnel.sh /usr/local/etc/rc.d/
    sudo cp tunnel_ssh.conf /etc/init/
    sudo cp tunnel_gitea.conf /etc/init/
    sudo initctl reload-configuration
