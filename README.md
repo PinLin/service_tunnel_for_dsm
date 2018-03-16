@@ -1,8 +1,6 @@
-# Tunnel_GCP
+# Service_Tunnel
 
-Create SSH Tunnel to my GCP VPS for my DS216J.
-
-Another project is [Tunnel_DS216J](https://gitea.ntut.com.tw/PinLin/tunnel_ds216j)
+Create SSH Tunnel to my GCP VPS for services on DS216J.
 
 ## Service
 
@@ -20,7 +18,8 @@ Another project is [Tunnel_DS216J](https://gitea.ntut.com.tw/PinLin/tunnel_ds216
 
 1. Clone and `cd` in.
   ```sh
-  git clone https://gitea.ntut.com.tw/PinLin/tunnel_gcp.git ~/tunnel_gcp && cd ~/tunnel_gcp
+  git clone https://gitea.ntut.com.tw/PinLin/service_tunnel.git ~/service_tunnel
+  cd ~/service_tunnel
   ```
 
 2. Edit the content of `tunnel_gcp.sh`, `tunnel_ssh.conf` and `tunnel_gitea.conf`.
