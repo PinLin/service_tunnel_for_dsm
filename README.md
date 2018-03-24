@@ -14,6 +14,10 @@ Create SSH Tunnel to my GCP VPS for services on DS216J.
   + From **192.168.168.106:3000**
   + To **ntut.com.tw:10080**
 
++ `Web`:
+
+  + From **192.168.168.106:80**
+  + To **ntut.com.tw:23333**
 ## Install
 
 1. Clone and `cd` in.
@@ -22,18 +26,20 @@ Create SSH Tunnel to my GCP VPS for services on DS216J.
   cd ~/service_tunnel
   ```
 
-2. Edit the content of `service_tunnel.sh`, `tunnel_ssh.conf` and `tunnel_gitea.conf`.
+2. Edit the content.
    ```sh
    sed -i "s/{{user}}/$USER/g" service_tunnel.sh
    sed -i "s/{{user}}/$USER/g" tunnel_ssh.conf
    sed -i "s/{{user}}/$USER/g" tunnel_gitea.conf
+   sed -i "s/{{user}}/$USER/g" tunnel_web.conf
    ```
 
-3. Copy `service_tunnel.sh` to `/usr/local/etc/rc.d`, `tunnel_ssh.conf` and `tunnel_gitea.conf` to `/etc/init`, then reload.
+3. Copy.
    ```sh
    sudo cp service_tunnel.sh /usr/local/etc/rc.d/
    sudo cp tunnel_ssh.conf /etc/init/
    sudo cp tunnel_gitea.conf /etc/init/
+   sudo cp tunnel_web.conf /etc/init/
    sudo initctl reload-configuration
    ```
 
@@ -41,4 +47,5 @@ Create SSH Tunnel to my GCP VPS for services on DS216J.
    ```sh
    sudo initctl start tunnel_ssh
    sudo initctl start tunnel_gitea
+   sudo initctl start tunnel_web
    ```
