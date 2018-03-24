@@ -16,7 +16,7 @@ Create SSH Tunnel to my GCP VPS for services on DS216J.
 
 + `Web`:
 
-  + From **192.168.168.106:80**
+  + From **192.168.168.106:443**
   + To **ntut.com.tw:23333**
 ## Install
 
