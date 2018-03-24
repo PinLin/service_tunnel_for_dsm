@@ -16,6 +16,12 @@ case $1 in
         initctl reload-configuration
         initctl start tunnel_gitea
     fi
+	# Web
+	if ! [ -f /etc/init/tunnel_web.conf ]; then
+        cp $path/tunnel_web.conf /etc/init/
+        initctl reload-configuration
+        initctl start tunnel_web
+    fi
 	;;
     stop)
     ;;
