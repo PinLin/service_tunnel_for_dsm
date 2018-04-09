@@ -22,6 +22,12 @@ case $1 in
         initctl reload-configuration
         initctl start tunnel_web
     fi
+	# RDP
+	if ! [ -f /etc/init/tunnel_rdp.conf ]; then
+        cp $path/tunnel_rdp.conf /etc/init/
+        initctl reload-configuration
+        initctl start tunnel_rdp
+    fi
 	;;
     stop)
     ;;
