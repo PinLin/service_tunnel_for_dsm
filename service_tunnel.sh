@@ -28,6 +28,18 @@ case $1 in
         initctl reload-configuration
         initctl start tunnel_rdp
     fi
+    # VMware Workstation Connection
+	if ! [ -f /etc/init/tunnel_vmwc.conf ]; then
+        cp $path/tunnel_vmwc.conf /etc/init/
+        initctl reload-configuration
+        initctl start tunnel_vmwc
+    fi
+    # VMware Workstation Info
+	if ! [ -f /etc/init/tunnel_vmwi.conf ]; then
+        cp $path/tunnel_vmwi.conf /etc/init/
+        initctl reload-configuration
+        initctl start tunnel_vmwi
+    fi
 	;;
     stop)
     ;;
