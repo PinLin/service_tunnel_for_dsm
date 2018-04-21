@@ -42,11 +42,11 @@ case $1 in
     fi
 
     # test tunnel status
-	if ! [ -f /etc/init/test_tunnel.conf ]; then
-        cp $path/test_tunnel.conf /etc/init/
-        initctl reload-configuration
-        initctl start test_tunnel
-    fi
+	#if ! [ -f /etc/init/test_tunnel.conf ]; then
+    #    cp $path/test_tunnel.conf /etc/init/
+    #    initctl reload-configuration
+    #    initctl start test_tunnel
+    #fi
 	;;
     stop)
     ;;
