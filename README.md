@@ -45,6 +45,7 @@ Create SSH Tunnel to my GCP VPS for services on DS216J.
    sed -i "s/{{user}}/$USER/g" tunnel_rdp.conf
    sed -i "s/{{user}}/$USER/g" tunnel_vmwc.conf
    sed -i "s/{{user}}/$USER/g" tunnel_vmwi.conf
+   sed -i "s/{{user}}/$USER/g" test_tunnel.conf
    ```
 
 3. Copy.
@@ -56,6 +57,7 @@ Create SSH Tunnel to my GCP VPS for services on DS216J.
    sudo cp tunnel_rdp.conf /etc/init/
    sudo cp tunnel_vmwc.conf /etc/init/
    sudo cp tunnel_vmwi.conf /etc/init/
+   sudo cp test_tunnel.conf /etc/init/
    sudo initctl reload-configuration
    ```
 
@@ -67,4 +69,5 @@ Create SSH Tunnel to my GCP VPS for services on DS216J.
    sudo initctl start tunnel_rdp
    sudo initctl start tunnel_vmwc
    sudo initctl start tunnel_vmwi
+   sudo initctl start test_tunnel
    ```
