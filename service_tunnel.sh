@@ -40,6 +40,12 @@ case $1 in
         initctl reload-configuration
         initctl start tunnel_vmwi
     fi
+    # Vegetable SSH
+	if ! [ -f /etc/init/tunnel_vegssh.conf ]; then
+        cp $path/tunnel_vegssh.conf /etc/init/
+        initctl reload-configuration
+        initctl start tunnel_vegssh
+    fi
 
 	;;
     stop)
