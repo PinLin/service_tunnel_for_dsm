@@ -41,12 +41,6 @@ case $1 in
         initctl start tunnel_vmwi
     fi
 
-    # test tunnel status
-	#if ! [ -f /etc/init/test_tunnel.conf ]; then
-    #    cp $path/test_tunnel.conf /etc/init/
-    #    initctl reload-configuration
-    #    initctl start test_tunnel
-    #fi
 	;;
     stop)
     ;;
