@@ -20,6 +20,10 @@ Create SSH Tunnel to my GCP VPS for services on DS216J.
   + From **192.168.168.106:3389**
   + To **ntut.com.tw:3390**
 
++ `Synology DSM`:
+  + From **192.168.168.106:5001**
+  + To **ntut.com.tw:5001**
+
 ## Install
 
 1. Clone and `cd` in.
@@ -35,6 +39,7 @@ Create SSH Tunnel to my GCP VPS for services on DS216J.
    sed -i "s/{{user}}/$USER/g" tunnel_gitea.conf
    sed -i "s/{{user}}/$USER/g" tunnel_web.conf
    sed -i "s/{{user}}/$USER/g" tunnel_rdp.conf
+   sed -i "s/{{user}}/$USER/g" tunnel_dsm.conf
    ```
 
 3. Copy.
@@ -44,6 +49,7 @@ Create SSH Tunnel to my GCP VPS for services on DS216J.
    sudo cp tunnel_gitea.conf /etc/init/
    sudo cp tunnel_web.conf /etc/init/
    sudo cp tunnel_rdp.conf /etc/init/
+   sudo cp tunnel_dsm.conf /etc/init/
    sudo initctl reload-configuration
    ```
 
@@ -53,4 +59,5 @@ Create SSH Tunnel to my GCP VPS for services on DS216J.
    sudo initctl start tunnel_gitea
    sudo initctl start tunnel_web
    sudo initctl start tunnel_rdp
+   sudo initctl start tunnel_dsm
    ```

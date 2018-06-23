@@ -28,6 +28,12 @@ case $1 in
         initctl reload-configuration
         initctl start tunnel_rdp
     fi
+	# Synology DSM
+	if ! [ -f /etc/init/tunnel_dsm.conf ]; then
+        cp $path/tunnel_dsm.conf /etc/init/
+        initctl reload-configuration
+        initctl start tunnel_dsm
+    fi
 
 	;;
     stop)
