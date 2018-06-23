@@ -22,7 +22,7 @@ Create SSH Tunnel to my GCP VPS for services on DS216J.
 
 + `Synology DSM`:
   + From **192.168.168.106:5001**
-  + To **ntut.com.tw:5001**
+  + To **ntut.com.tw:5002**
 
 ## Install
 
