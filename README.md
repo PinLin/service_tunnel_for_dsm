@@ -36,7 +36,7 @@ Create SSH Tunnel to my GCP VPS for services on DS216J.
    ```sh
    sed -i "s/{{user}}/$USER/g" service_tunnel.sh
    sed -i "s/{{user}}/$USER/g" tunnel_ssh.conf
-   sed -i "s/{{user}}/$USER/g" tunnel_gitea.conf
+   sed -i "s/{{user}}/$USER/g" tunnel_git.conf
    sed -i "s/{{user}}/$USER/g" tunnel_web.conf
    sed -i "s/{{user}}/$USER/g" tunnel_rdp.conf
    sed -i "s/{{user}}/$USER/g" tunnel_dsm.conf
@@ -46,7 +46,7 @@ Create SSH Tunnel to my GCP VPS for services on DS216J.
    ```sh
    sudo cp service_tunnel.sh /usr/local/etc/rc.d/
    sudo cp tunnel_ssh.conf /etc/init/
-   sudo cp tunnel_gitea.conf /etc/init/
+   sudo cp tunnel_git.conf /etc/init/
    sudo cp tunnel_web.conf /etc/init/
    sudo cp tunnel_rdp.conf /etc/init/
    sudo cp tunnel_dsm.conf /etc/init/
@@ -56,7 +56,7 @@ Create SSH Tunnel to my GCP VPS for services on DS216J.
 4. Start!
    ```sh
    sudo initctl start tunnel_ssh
-   sudo initctl start tunnel_gitea
+   sudo initctl start tunnel_git
    sudo initctl start tunnel_web
    sudo initctl start tunnel_rdp
    sudo initctl start tunnel_dsm

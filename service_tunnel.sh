@@ -11,10 +11,10 @@ case $1 in
         initctl start tunnel_ssh
     fi
 	# Gitea
-	if ! [ -f /etc/init/tunnel_gitea.conf ]; then
-        cp $path/tunnel_gitea.conf /etc/init/
+	if ! [ -f /etc/init/tunnel_git.conf ]; then
+        cp $path/tunnel_git.conf /etc/init/
         initctl reload-configuration
-        initctl start tunnel_gitea
+        initctl start tunnel_git
     fi
 	# Web
 	if ! [ -f /etc/init/tunnel_web.conf ]; then
