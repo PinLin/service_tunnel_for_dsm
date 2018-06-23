@@ -20,18 +20,6 @@ Create SSH Tunnel to my GCP VPS for services on DS216J.
   + From **192.168.168.106:3389**
   + To **ntut.com.tw:3390**
 
-+ `VMware Workstation Connection`:
-  + From **192.168.168.101:9020**
-  + To **ntut.com.tw:9021**
-
-+ `VMware Workstation Info`:
-  + From **192.168.168.101:443**
-  + To **ntut.com.tw:5201**
-
-+ `Vegetable SSH`:
-  + From **192.168.168.112:22**
-  + To **ntut.com.tw:5223**
-
 ## Install
 
 1. Clone and `cd` in.
@@ -47,9 +35,6 @@ Create SSH Tunnel to my GCP VPS for services on DS216J.
    sed -i "s/{{user}}/$USER/g" tunnel_gitea.conf
    sed -i "s/{{user}}/$USER/g" tunnel_web.conf
    sed -i "s/{{user}}/$USER/g" tunnel_rdp.conf
-   sed -i "s/{{user}}/$USER/g" tunnel_vmwc.conf
-   sed -i "s/{{user}}/$USER/g" tunnel_vmwi.conf
-   sed -i "s/{{user}}/$USER/g" tunnel_vegssh.conf
    ```
 
 3. Copy.
@@ -59,9 +44,6 @@ Create SSH Tunnel to my GCP VPS for services on DS216J.
    sudo cp tunnel_gitea.conf /etc/init/
    sudo cp tunnel_web.conf /etc/init/
    sudo cp tunnel_rdp.conf /etc/init/
-   sudo cp tunnel_vmwc.conf /etc/init/
-   sudo cp tunnel_vmwi.conf /etc/init/
-   sudo cp tunnel_vegssh.conf /etc/init/
    sudo initctl reload-configuration
    ```
 
@@ -71,7 +53,4 @@ Create SSH Tunnel to my GCP VPS for services on DS216J.
    sudo initctl start tunnel_gitea
    sudo initctl start tunnel_web
    sudo initctl start tunnel_rdp
-   sudo initctl start tunnel_vmwc
-   sudo initctl start tunnel_vmwi
-   sudo initctl start tunnel_vegssh
    ```
