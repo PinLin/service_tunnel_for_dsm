@@ -20,7 +20,7 @@ Create SSH Tunnel to my GCP VPS for services on DS216J.
   + From **192.168.168.106:3389**
   + To **ntut.com.tw:3390**
 
-+ `Synology DSM`:
++ `DSM`:
   + From **192.168.168.106:5001**
   + To **ntut.com.tw:5002**
 
@@ -28,7 +28,7 @@ Create SSH Tunnel to my GCP VPS for services on DS216J.
 
 1. Clone and `cd` in.
   ```sh
-  git clone https://gitea.ntut.com.tw/PinLin/service_tunnel.git ~/service_tunnel
+  git clone https://git.ntut.com.tw/PinLin/service_tunnel.git ~/service_tunnel
   cd ~/service_tunnel
   ```
 
