@@ -6,9 +6,13 @@ Create SSH Tunnel to my GCP VPS for services on DS216J.
 
 + `DS216J SSH`: 
   +  **localhost:22**
+  +  **ntut.com.tw:10023**
+
++ `DS216J Gitea SSH`:
+  +  **localhost:9487**
   +  **ntut.com.tw:9488**
 
-+ `DS216J Gitea`:
++ `DS216J Gitea Web`:
   +  **localhost:3000**
   +  **ntut.com.tw:10080**
 
@@ -36,7 +40,8 @@ Create SSH Tunnel to my GCP VPS for services on DS216J.
    ```sh
    sed -i "s/{{user}}/$USER/g" service_tunnel.sh
    sed -i "s/{{user}}/$USER/g" tunnel_ds216j_ssh.conf
-   sed -i "s/{{user}}/$USER/g" tunnel_ds216j_gitea.conf
+   sed -i "s/{{user}}/$USER/g" tunnel_ds216j_gitea_ssh.conf
+   sed -i "s/{{user}}/$USER/g" tunnel_ds216j_gitea_web.conf
    sed -i "s/{{user}}/$USER/g" tunnel_ds216j_web.conf
    sed -i "s/{{user}}/$USER/g" tunnel_ds216j_dsm.conf
    sed -i "s/{{user}}/$USER/g" tunnel_3770_rdp.conf
@@ -46,7 +51,8 @@ Create SSH Tunnel to my GCP VPS for services on DS216J.
    ```sh
    sudo cp service_tunnel.sh /usr/local/etc/rc.d/
    sudo cp tunnel_ds216j_ssh.conf /etc/init/
-   sudo cp tunnel_ds216j_gitea.conf /etc/init/
+   sudo cp tunnel_ds216j_gitea_ssh.conf /etc/init/
+   sudo cp tunnel_ds216j_gitea_web.conf /etc/init/
    sudo cp tunnel_ds216j_web.conf /etc/init/
    sudo cp tunnel_ds216j_dsm.conf /etc/init/
    sudo cp tunnel_3770_rdp.conf /etc/init/
@@ -56,7 +62,8 @@ Create SSH Tunnel to my GCP VPS for services on DS216J.
 4. Start!
    ```sh
    sudo initctl start tunnel_ds216j_ssh
-   sudo initctl start tunnel_ds216j_gitea
+   sudo initctl start tunnel_ds216j_gitea_ssh
+   sudo initctl start tunnel_ds216j_gitea_web
    sudo initctl start tunnel_ds216j_web
    sudo initctl start tunnel_ds216j_dsm
    sudo initctl start tunnel_3770_rdp

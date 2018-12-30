@@ -10,11 +10,17 @@ case $1 in
         initctl reload-configuration
         initctl start tunnel_ds216j_ssh
     fi
-    # DS216J Gitea
-    if ! [ -f /etc/init/tunnel_ds216j_gitea.conf ]; then
-        cp $path/tunnel_ds216j_gitea.conf /etc/init/
+    # DS216J Gitea SSH
+    if ! [ -f /etc/init/tunnel_ds216j_gitea_ssh.conf ]; then
+        cp $path/tunnel_ds216j_gitea_ssh.conf /etc/init/
         initctl reload-configuration
-        initctl start tunnel_ds216j_gitea
+        initctl start tunnel_ds216j_gitea_ssh
+    fi
+    # DS216J Gitea Web
+    if ! [ -f /etc/init/tunnel_ds216j_gitea_web.conf ]; then
+        cp $path/tunnel_ds216j_gitea_web.conf /etc/init/
+        initctl reload-configuration
+        initctl start tunnel_ds216j_gitea_web
     fi
     # DS216J Web
     if ! [ -f /etc/init/tunnel_ds216j_web.conf ]; then
