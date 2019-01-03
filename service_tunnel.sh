@@ -1,7 +1,7 @@
 #!/bin/sh
 
 path='{{path}}'
-user='{{user}}'
+user='{{service_user}}'
 
 case $1 in
     start)

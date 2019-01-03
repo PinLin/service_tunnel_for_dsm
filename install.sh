@@ -25,7 +25,7 @@ fi
 initctl reload-configuration
 
 sed "s={{path}}=$(pwd)=g" service_tunnel.sh |\
-sed "s={{user}}=$USER=g" service_tunnel.sh > /usr/local/etc/rc.d/service_tunnel.sh
+sed "s={{service_user}}=$1=g" > /usr/local/etc/rc.d/service_tunnel.sh
 
 chmod +x /usr/local/etc/rc.d/service_tunnel.sh
 /usr/local/etc/rc.d/service_tunnel.sh start

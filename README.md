@@ -35,7 +35,7 @@ Create SSH Tunnel to my GCP VPS for services on DS216J.
 
 2. Execute `install.sh`.
    ```sh
-   sudo ./install.sh
+   sudo ./install.sh $USER
    ```
 
 ## Run
