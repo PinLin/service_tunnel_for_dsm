@@ -22,6 +22,10 @@ Create SSH Tunnel to my GCP VPS for services on DS216J.
   +  **localhost:5001**
   +  **ntut.com.tw:5002**
 
++ `DS216J MariaDB`:
+  +  **localhost:3306**
+  +  **ntut.com.tw:3307**
+
 + `3770 RDP`:
   +  **192.168.168.101:3389**
   +  **ntut.com.tw:3390**
@@ -46,6 +50,7 @@ Create SSH Tunnel to my GCP VPS for services on DS216J.
    sudo initctl start tunnel_ds216j_gitea_web
    sudo initctl start tunnel_ds216j_web
    sudo initctl start tunnel_ds216j_dsm
+   sudo initctl start tunnel_ds216j_mariadb
    sudo initctl start tunnel_3770_rdp
    ```
 
@@ -56,5 +61,6 @@ Create SSH Tunnel to my GCP VPS for services on DS216J.
    sudo initctl stop tunnel_ds216j_gitea_web
    sudo initctl stop tunnel_ds216j_web
    sudo initctl stop tunnel_ds216j_dsm
+   sudo initctl stop tunnel_ds216j_mariadb
    sudo initctl stop tunnel_3770_rdp
    ```
