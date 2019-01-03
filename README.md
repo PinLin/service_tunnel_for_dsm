@@ -5,18 +5,23 @@ Create SSH Tunnel to my GCP VPS for services on DS216J.
 + `DS216J SSH`: 
   +  **localhost:22**
   +  **ntut.com.tw:10023**
+
 + `DS216J Gitea SSH`:
   +  **localhost:9487**
   +  **ntut.com.tw:9488**
+
 + `DS216J Gitea Web`:
   +  **localhost:3000**
   +  **ntut.com.tw:10080**
+
 + `DS216J Web`:
   +  **localhost:443**
   +  **ntut.com.tw:10443**
+
 + `DS216J DSM`:
   +  **localhost:5001**
   +  **ntut.com.tw:5002**
+
 + `3770 RDP`:
   +  **192.168.168.101:3389**
   +  **ntut.com.tw:3390**
