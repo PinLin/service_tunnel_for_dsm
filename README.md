@@ -1,5 +1,5 @@
-# Service Tunnel to VPS for DSM
-Create SSH Tunnel to my GCP VPS for services on DS216J.
+# Service Tunnel for DSM
+Create SSH tunnel Upstart service to my GCP VPS for services on DSM.
 
 ## Service
 + `DS216J SSH`: 
