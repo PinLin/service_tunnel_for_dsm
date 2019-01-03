@@ -23,7 +23,7 @@ Create SSH Tunnel to my GCP VPS for services on DS216J.
   +  **ntut.com.tw:5002**
 
 + `DS216J MariaDB`:
-  +  **localhost:3306**
+  +  **localhost:3307**
   +  **ntut.com.tw:3307**
 
 + `3770 RDP`:
