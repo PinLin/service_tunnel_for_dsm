@@ -27,36 +27,19 @@ Create SSH Tunnel to my GCP VPS for services on DS216J.
   +  **ntut.com.tw:3390**
 
 ## Install
-1. Clone and `cd` in.
+1. Clone and enter it.
   ```sh
-  git clone https://git.ntut.com.tw/PinLin/service_tunnel.git ~/service_tunnel
-  cd ~/service_tunnel
+  git clone https://git.ntut.com.tw/PinLin/service_tunnel.git
+  cd service_tunnel
   ```
 
-2. Edit the content.
+2. Execute `install.sh`.
    ```sh
-   sed -i "s/{{user}}/$USER/g" service_tunnel.sh
-   sed -i "s/{{user}}/$USER/g" tunnel_ds216j_ssh.conf
-   sed -i "s/{{user}}/$USER/g" tunnel_ds216j_gitea_ssh.conf
-   sed -i "s/{{user}}/$USER/g" tunnel_ds216j_gitea_web.conf
-   sed -i "s/{{user}}/$USER/g" tunnel_ds216j_web.conf
-   sed -i "s/{{user}}/$USER/g" tunnel_ds216j_dsm.conf
-   sed -i "s/{{user}}/$USER/g" tunnel_3770_rdp.conf
+   sudo ./install.sh
    ```
 
-3. Copy.
-   ```sh
-   sudo cp service_tunnel.sh /usr/local/etc/rc.d/
-   sudo cp tunnel_ds216j_ssh.conf /etc/init/
-   sudo cp tunnel_ds216j_gitea_ssh.conf /etc/init/
-   sudo cp tunnel_ds216j_gitea_web.conf /etc/init/
-   sudo cp tunnel_ds216j_web.conf /etc/init/
-   sudo cp tunnel_ds216j_dsm.conf /etc/init/
-   sudo cp tunnel_3770_rdp.conf /etc/init/
-   sudo initctl reload-configuration
-   ```
-
-4. Start!
+## Run
+1. Start service.
    ```sh
    sudo initctl start tunnel_ds216j_ssh
    sudo initctl start tunnel_ds216j_gitea_ssh
@@ -64,4 +47,14 @@ Create SSH Tunnel to my GCP VPS for services on DS216J.
    sudo initctl start tunnel_ds216j_web
    sudo initctl start tunnel_ds216j_dsm
    sudo initctl start tunnel_3770_rdp
+   ```
+
+2. Stop service.
+   ```sh
+   sudo initctl stop tunnel_ds216j_ssh
+   sudo initctl stop tunnel_ds216j_gitea_ssh
+   sudo initctl stop tunnel_ds216j_gitea_web
+   sudo initctl stop tunnel_ds216j_web
+   sudo initctl stop tunnel_ds216j_dsm
+   sudo initctl stop tunnel_3770_rdp
    ```

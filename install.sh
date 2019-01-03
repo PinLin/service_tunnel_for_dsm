@@ -1,0 +1,32 @@
+#!/bin/bash
+
+if [ $UID != 0 ]
+then
+    echo "Need root permission!"
+    exit 1
+fi
+
+if ! [ -f service_tunnel.sh ]
+then
+    echo "Please execute me in project directory."
+    exit 2
+fi
+
+(
+    initctl stop tunnel_ds216j_ssh
+    initctl stop tunnel_ds216j_gitea_ssh
+    initctl stop tunnel_ds216j_gitea_web
+    initctl stop tunnel_ds216j_web
+    initctl stop tunnel_ds216j_dsm
+    initctl stop tunnel_3770_rdp
+)  2> /dev/null
+
+rm /etc/init/tunnel_*
+
+initctl reload-configuration
+
+sed "s={{path}}=$(pwd)=g" service_tunnel.sh |\
+sed "s={{user}}=$USER=g" service_tunnel.sh > /usr/local/etc/rc.d/service_tunnel.sh
+
+chmod +x /usr/local/etc/rc.d/service_tunnel.sh
+/usr/local/etc/rc.d/service_tunnel.sh start
