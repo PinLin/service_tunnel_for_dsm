@@ -12,6 +12,12 @@ then
     exit 2
 fi
 
+if [ "$1" == "" ]
+then
+    echo "Please give me the name of service user or give me "'$USER'"."
+    exit 3
+fi
+
 (
     initctl stop tunnel_ds216j_ssh
     initctl stop tunnel_ds216j_gitea_ssh
