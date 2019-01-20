@@ -29,11 +29,17 @@ case $1 in
         initctl reload-configuration
         initctl start tunnel_ds216j_web
     fi
-    # DS216J DSM
-    if ! [ -f /etc/init/tunnel_ds216j_dsm.conf ]; then
-        sed "s={{user}}=$user=g" $path/tunnel_ds216j_dsm.conf > /etc/init/tunnel_ds216j_dsm.conf
+    # DS216J DSM HTTP
+    if ! [ -f /etc/init/tunnel_ds216j_dsm_http.conf ]; then
+        sed "s={{user}}=$user=g" $path/tunnel_ds216j_dsm_http.conf > /etc/init/tunnel_ds216j_dsm_http.conf
         initctl reload-configuration
-        initctl start tunnel_ds216j_dsm
+        initctl start tunnel_ds216j_dsm_http
+    fi
+    # DS216J DSM HTTPS
+    if ! [ -f /etc/init/tunnel_ds216j_dsm_https.conf ]; then
+        sed "s={{user}}=$user=g" $path/tunnel_ds216j_dsm_https.conf > /etc/init/tunnel_ds216j_dsm_https.conf
+        initctl reload-configuration
+        initctl start tunnel_ds216j_dsm_https
     fi
     # DS216J MariaDB
     if ! [ -f /etc/init/tunnel_ds216j_mariadb.conf ]; then
