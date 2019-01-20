@@ -29,6 +29,12 @@ case $1 in
         initctl reload-configuration
         initctl start tunnel_ds216j_web
     fi
+    # DS216J Drive
+    if ! [ -f /etc/init/tunnel_ds216j_drive.conf ]; then
+        sed "s={{user}}=$user=g" $path/tunnel_ds216j_drive.conf > /etc/init/tunnel_ds216j_drive.conf
+        initctl reload-configuration
+        initctl start tunnel_ds216j_drive
+    fi
     # DS216J DSM HTTP
     if ! [ -f /etc/init/tunnel_ds216j_dsm_http.conf ]; then
         sed "s={{user}}=$user=g" $path/tunnel_ds216j_dsm_http.conf > /etc/init/tunnel_ds216j_dsm_http.conf
