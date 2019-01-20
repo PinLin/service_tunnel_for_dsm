@@ -30,6 +30,10 @@ Create SSH tunnel Upstart service to my GCP VPS for services on DSM.
   +  **localhost:3307**
   +  **ntut.com.tw:3307**
 
++ `3770 SSH`:
+  +  **192.168.168.101:22**
+  +  **ntut.com.tw:30023**
+
 + `3770 RDP`:
   +  **192.168.168.101:3389**
   +  **ntut.com.tw:3390**
@@ -56,6 +60,7 @@ Create SSH tunnel Upstart service to my GCP VPS for services on DSM.
    sudo initctl start tunnel_ds216j_dsm_http
    sudo initctl start tunnel_ds216j_dsm_https
    sudo initctl start tunnel_ds216j_mariadb
+   sudo initctl start tunnel_3770_ssh
    sudo initctl start tunnel_3770_rdp
    ```
 
@@ -68,5 +73,6 @@ Create SSH tunnel Upstart service to my GCP VPS for services on DSM.
    sudo initctl stop tunnel_ds216j_dsm_http
    sudo initctl stop tunnel_ds216j_dsm_https
    sudo initctl stop tunnel_ds216j_mariadb
+   sudo initctl stop tunnel_3770_ssh
    sudo initctl stop tunnel_3770_rdp
    ```

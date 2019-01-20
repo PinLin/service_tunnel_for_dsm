@@ -47,6 +47,12 @@ case $1 in
         initctl reload-configuration
         initctl start tunnel_ds216j_mariadb
     fi
+    # 3770 SSH
+    if ! [ -f /etc/init/tunnel_3770_ssh.conf ]; then
+        sed "s={{user}}=$user=g" $path/tunnel_3770_ssh.conf > /etc/init/tunnel_3770_ssh.conf
+        initctl reload-configuration
+        initctl start tunnel_3770_ssh
+    fi
     # 3770 RDP
     if ! [ -f /etc/init/tunnel_3770_rdp.conf ]; then
         sed "s={{user}}=$user=g" $path/tunnel_3770_rdp.conf > /etc/init/tunnel_3770_rdp.conf

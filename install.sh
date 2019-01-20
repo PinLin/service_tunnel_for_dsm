@@ -20,6 +20,7 @@ fi
     initctl stop tunnel_ds216j_dsm_http
     initctl stop tunnel_ds216j_dsm_https
     initctl stop tunnel_ds216j_mariadb
+    initctl stop tunnel_3770_ssh
     initctl stop tunnel_3770_rdp
     rm /etc/init/tunnel_*
 )  2> /dev/null
