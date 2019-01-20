@@ -18,10 +18,6 @@ Create SSH tunnel Upstart service to my GCP VPS for services on DS216J.
   +  **localhost:443**
   +  **ntut.com.tw:10443**
 
-+ `DS216J Drive`:
-  +  **localhost:6690**
-  +  **ntut.com.tw:6691**
-
 + `DS216J DSM HTTP`:
   +  **localhost:5000**
   +  **ntut.com.tw:5002**
@@ -61,7 +57,6 @@ Create SSH tunnel Upstart service to my GCP VPS for services on DS216J.
    sudo initctl start tunnel_ds216j_gitea_ssh
    sudo initctl start tunnel_ds216j_gitea_web
    sudo initctl start tunnel_ds216j_web
-   sudo initctl start tunnel_ds216j_drive
    sudo initctl start tunnel_ds216j_dsm_http
    sudo initctl start tunnel_ds216j_dsm_https
    sudo initctl start tunnel_ds216j_mariadb
@@ -75,7 +70,6 @@ Create SSH tunnel Upstart service to my GCP VPS for services on DS216J.
    sudo initctl stop tunnel_ds216j_gitea_ssh
    sudo initctl stop tunnel_ds216j_gitea_web
    sudo initctl stop tunnel_ds216j_web
-   sudo initctl stop tunnel_ds216j_drive
    sudo initctl stop tunnel_ds216j_dsm_http
    sudo initctl stop tunnel_ds216j_dsm_https
    sudo initctl stop tunnel_ds216j_mariadb
