@@ -38,6 +38,26 @@ Create SSH tunnel Upstart service to my GCP VPS for services on DS216J.
   +  **192.168.168.101:3389**
   +  **ntut.com.tw:3390**
 
++ `3770 Code1`:
+  +  **192.168.168.101:8701**
+  +  **ntut.com.tw:38701**
+
++ `3770 Code2`:
+  +  **192.168.168.101:8702**
+  +  **ntut.com.tw:38702**
+
++ `3770 Code3`:
+  +  **192.168.168.101:8703**
+  +  **ntut.com.tw:38703**
+
++ `3770 Code4`:
+  +  **192.168.168.101:8704**
+  +  **ntut.com.tw:38704**
+
++ `3770 Code5`:
+  +  **192.168.168.101:8705**
+  +  **ntut.com.tw:38705**
+
 ## Install
 1. Clone and enter it.
   ```sh
