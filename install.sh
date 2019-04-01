@@ -28,6 +28,11 @@ fi
     initctl stop tunnel_ds216j_mariadb
     initctl stop tunnel_3770_ssh
     initctl stop tunnel_3770_rdp
+    initctl stop tunnel_3770_coder1
+    initctl stop tunnel_3770_coder2
+    initctl stop tunnel_3770_coder3
+    initctl stop tunnel_3770_coder4
+    initctl stop tunnel_3770_coder5
     rm /etc/init/tunnel_*
 )  2> /dev/null
 

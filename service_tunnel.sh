@@ -59,6 +59,36 @@ case $1 in
         initctl reload-configuration
         initctl start tunnel_3770_rdp
     fi
+    # 3770 Coder1
+    if ! [ -f /etc/init/tunnel_3770_coder1.conf ]; then
+        sed "s={{user}}=$user=g" $path/tunnel_3770_coder1.conf > /etc/init/tunnel_3770_coder1.conf
+        initctl reload-configuration
+        initctl start tunnel_3770_coder1
+    fi
+    # 3770 Coder2
+    if ! [ -f /etc/init/tunnel_3770_coder2.conf ]; then
+        sed "s={{user}}=$user=g" $path/tunnel_3770_coder2.conf > /etc/init/tunnel_3770_coder2.conf
+        initctl reload-configuration
+        initctl start tunnel_3770_coder2
+    fi
+    # 3770 Coder3
+    if ! [ -f /etc/init/tunnel_3770_coder3.conf ]; then
+        sed "s={{user}}=$user=g" $path/tunnel_3770_coder3.conf > /etc/init/tunnel_3770_coder3.conf
+        initctl reload-configuration
+        initctl start tunnel_3770_coder3
+    fi
+    # 3770 Coder4
+    if ! [ -f /etc/init/tunnel_3770_coder4.conf ]; then
+        sed "s={{user}}=$user=g" $path/tunnel_3770_coder4.conf > /etc/init/tunnel_3770_coder4.conf
+        initctl reload-configuration
+        initctl start tunnel_3770_coder4
+    fi
+    # 3770 Coder5
+    if ! [ -f /etc/init/tunnel_3770_coder5.conf ]; then
+        sed "s={{user}}=$user=g" $path/tunnel_3770_coder5.conf > /etc/init/tunnel_3770_coder5.conf
+        initctl reload-configuration
+        initctl start tunnel_3770_coder5
+    fi
     ;;
     stop)
     ;;
