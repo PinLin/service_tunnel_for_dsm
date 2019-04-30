@@ -11,7 +11,7 @@ Location: [localhost](#)
 |    SSH    |  22  | 10023 |
 |    Web    | 443  | 10443 |
 |  MariaDB  | 3307 | 3307  |
-| Gitea SSH | 9487 | 9487  |
+| Gitea SSH | 9487 | 9488  |
 | Gitea Web | 3000 | 10080 |
 | DSM HTTP  | 5000 | 5002  |
 | DSM HTTPS | 5001 | 5003  |
