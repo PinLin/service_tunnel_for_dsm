@@ -6,13 +6,4 @@ Upstart service for creating SSH tunnels to my VPS.
 
 ## Install
 
-1. Clone and enter it.
-```sh
-git clone https://git.ntut.com.tw/PinLin/service_tunnel.git
-cd service_tunnel
-```
-
-2. Execute `install.sh`.
-```sh
-sudo ./install.sh $USER
-```
+Unavailable
