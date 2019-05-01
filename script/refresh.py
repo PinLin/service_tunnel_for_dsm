@@ -22,7 +22,7 @@ def main():
     os.system('initctl reload-configuration')
 
     for name, tunnel in tunnels.items():
-        with open('/usr/local/etc/rc.d/' + name + '.sh') as f:
+        with open('/usr/local/etc/rc.d/' + name + '.sh', 'w') as f:
             f.write(template.format(TUNNEL_NAME=name,
                                     DEVICE=tunnel['DEVICE'],
                                     SERVICE=tunnel['SERVICE'],
