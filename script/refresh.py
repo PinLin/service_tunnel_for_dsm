@@ -14,8 +14,10 @@ def main():
     for name in tunnels.keys():
         os.system('initctl stop ' + name)
 
-        os.remove('/etc/init/' + name + '.conf')
-        os.remove('/usr/local/etc/rc.d/' + name + '.sh')
+        if (os.path.isfile('/etc/init/' + name + '.conf')):
+            os.remove('/etc/init/' + name + '.conf')
+        if (os.path.isfile('/usr/local/etc/rc.d/' + name + '.sh')):
+            os.remove('/usr/local/etc/rc.d/' + name + '.sh')
 
     os.system('initctl reload-configuration')
 
