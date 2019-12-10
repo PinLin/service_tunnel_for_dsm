@@ -15,10 +15,12 @@ Upstart service for creating SSH tunnels to my VPS.
 git clone https://git.ntut.com.tw/PinLin/service_tunnel.git
 cd service_tunnel
 ```
+
 2. Switch branch to ds216j
 ```bash
 git checkout ds216j
 ```
+
 3. Execute `script/refresh.py`
 ```bash
 sudo python3 script/refresh.py
