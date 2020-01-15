@@ -23,5 +23,5 @@ git checkout ds216j
 
 3. Execute `script/refresh.py`
 ```bash
-sudo python3 script/refresh.py
+sudo python3 scripts/refresh.py
 ```
