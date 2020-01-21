@@ -21,7 +21,7 @@ cd service_tunnel
 git checkout ds216j
 ```
 
-3. Execute `script/refresh.py`
+3. Execute `reconfigure.py`
 ```bash
-sudo python3 scripts/refresh.py
+sudo python3 reconfigure.py
 ```
