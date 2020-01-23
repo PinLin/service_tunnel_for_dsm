@@ -9,7 +9,7 @@ FILENAME="{FILENAME}"
 
 # 服務配置檔的範本
 template="description \"Service Tunnel for $DESCRIPTION\"\n
-          author \"Pin Lin\"\n
+          author \"PinLin/service_tunnel_for_dsm\"\n
           \n
           start on started sshd\n
           stop on stopping sshd\n
